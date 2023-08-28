@@ -29,7 +29,7 @@ Go to my [Github account](https://github.com/isabelle926) !!
 <img src="images/isabelle_csa_pic.png"
      alt="My cool picture"
      style="float: left; margin-right: 10px;" 
-     width=300/>
+     width=800/>
 
 ### Here's my Tri 1 Schedule
 plz dont stalk me hehe
