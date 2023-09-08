@@ -8,7 +8,7 @@ type: tangibles
 ---
 # Week 2 Exit Ticket
 Pair Plan Project
-- [Link](https://vivianknee.github.io/VivianCSA//2023/09/06/pairplan.html) to Pair Plan Project
+- [Link](https://github.com/nighthawkcoders/student/issues/33) to Pair Plan Project
 - [Link](https://github.com/vivianknee/FastPages/issues/49#issue-1881165198) to Pair Plan (Due Monday)
 - focus on input output
 - focus on data, and utilizing it
@@ -38,7 +38,7 @@ Pair Plan Project
     }
 </script>
 Java output w/jquery hacks
-- [Link](https://vivianknee.github.io/VivianCSA//c3.0/c3.1/c4.1/2023/09/06/javascript-output-jquery_IPYNB_2_.html) to hacks
+- [Link](https://isabelle926.github.io/student//c3.0/c3.1/c4.1/2023/09/06/javascript-output-jquery_IPYNB_2_.html) to hacks
 - Make your own tables, with data according to your interests.
 - Describe a benefit of a markdown table.
 - Try to Style the HTML table using w3schools.
