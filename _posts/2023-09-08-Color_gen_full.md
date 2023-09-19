@@ -41,8 +41,8 @@ type: hacks
         </div>
         <h1>Complementary Color Generator</h1>
         <input type="color" id="inputColor">
-        <button id="generateComplementary">Generate Complementary</button>
-        <div id="complementaryColor" style="width: 100px; height: 100px;"></div>
+        <button class="generate-palette-button" id="generateComplementary">Generate Complementary</button>
+        <div class="complimentary-div" id="complementaryColor" style="width: 100px; height: 100px;"></div>
     </main>
 </body>
 </html>
@@ -69,6 +69,10 @@ type: hacks
         outline: none;
         background: none;
         color: inherit;
+    }
+
+    .complimentary-div{
+        margin-top: 1rem;
     }
 
     button {
