@@ -58,13 +58,13 @@ Invoking bot.writeAIMLFiles();
 | 40. ![40](MC_40.png) | I originally answered "D", which is incorrect because when whatsItDo(“W”) is called, nothing is printed since the print occurs in the if statement which does not execute. All previous recursive method calls print a substring of str and not str. | The correct answer is "C". The call whatsItDo(“WATCH”) assigns to temp a substring of “WATCH” starting at 0 and ending at 4 – 1 or 3, which is “WATC”. Next the call whatsItDo(“WATC”) is made. The call whatsItDo(“WATC”), sets its local temp to “WAT” and calls whatsItDo(“WAT”). The call whatsItDo(“WAT”), sets its local temp to “WA” and calls whatsItDo(“WA”). The call whatsItDo(“WA”), sets its local temp to “W” and calls whatsItDo(“W”). The call whatsItDo(“W”) reaches the base case and doesn’t do anything since the length of “W” is 1. Then we need to finish the call to whatsItDo(“WA”), which prints the value of its local temp, “W”.  Then we need to finish the call to whatsItDo(“WAT”), which prints the value of its local temp, “WA”. Then we need to finish the call to whatsItDo(“WATC”), which prints the value of its local temp, “WAT”. Then we need to finish the call to whatsItDo(“WATCH”), which prints the value of its local temp, “WATC”. And the recursive calls are complete. |
 
 ## Lessons
-* [Unit 1](https://isabelle926.github.io/student/lesson)
-* [Unit 2](url)
-* [Unit 3](https://isabelle926.github.io/student/2023/10/08/Unit_3_Booleans_IPYNB_2_.html)
-* [Unit 4](https://isabelle926.github.io/student//2023/10/12/Unit4Lesson_IPYNB_2_.html)
-* [Unit 5](https://isabelle926.github.io/student/2023/10/14/Unit5_IPYNB_2_.html)
+* [Unit 1](https://isabelle926.github.io/student/lesson) grade: 0.87
+* [Unit 2](url) grade: 0.95
+* [Unit 3](https://isabelle926.github.io/student/2023/10/08/Unit_3_Booleans_IPYNB_2_.html) grade: 1.0
+* [Unit 4](https://isabelle926.github.io/student//2023/10/12/Unit4Lesson_IPYNB_2_.html) grade: 0.88
+* [Unit 5](https://isabelle926.github.io/student/2023/10/14/Unit5_IPYNB_2_.html) grade: 0.9
 * Unit 6 taught by our team
-* [Unit 7](url)
-* [Unit 8](url)
+* [Unit 7](url) grade: 0.95
+* [Unit 8](url) grade: 0.9
 * [Unit 9](url)
 * [Unit 10](url)
