@@ -1,3 +1,11 @@
+---
+toc: true
+layout: none
+title: Individual review
+type: tangibles
+courses: { csa: {week: 12} }
+---
+
 ## Isabelle's Individual Review
 
 ### Super simple chatbot
