@@ -1,13 +1,33 @@
----
-toc: true
-comments: true
-layout: post
-title: MC Corrections
-description: Corrections for collegeboard mcq
-courses: { csa: {week: '2'} }
-type: tangibles
----
+## Isabelle's Individual Review
 
+### Super simple chatbot
+No AI implemented here
+![simple chatbot](inr1.png)
+Output:
+![simple chatbot output](inr2.png)
+
+### Simple chatbot that uses training data
+![chatbot v2](inr3.png)
+
+### Program AB
+Program AB is a implementation of AIML 
+
+Adding dependencies to the pom.xml file
+![pom](inr4.png)
+
+Adding training data files + bots into repository
+![dir](inr5.png)
+
+Output
+![output 2](inr6.png)
+
+Adding custom patterns
+![custom](inr7.png)
+
+Invoking bot.writeAIMLFiles();
+![add aiml](inr8.png)
+
+## MCQ Corrections
 ![Score](MC_score.png)
 ## MC Corrections
 
@@ -36,3 +56,15 @@ type: tangibles
 | 38. ![38](MC_38.png) | I originally answered "B", which is wrong as this expression will always evaluate to true since x is always either greater than 1000 or less than 1500. | The correct answer is "A". The original expression evaluates to true when either y is greater than 10000 or x is between 1000 and 1500. If the value of y is greater than 10000, this equivalent expression will evaluate to true since it is used in both of the or (||) expressions. If y is not greater than 10000, the only way the equivalent expression can evaluate to true is if x is between 1000 and 1500. |
 | 39. ![39](MC_39.png) | I originally answered "B", which is incorrect because 9 is the value that is passed in the first recursive call to recur. | The correct answer is "D", 16. The call recur(27) returns the value of recur(recur(9)) since 27 is greater than 10. The call recur(9) returns 18, since 9 is less than or equal to 10. Therefore, recur(recur(9)) is recur(18). The call recur(18) returns recur(recur(6)) since 18 is greater than 10. The call recur(6) returns 12, since 6 is less than or equal to 10. Therefore, recur(recur(6)) is recur(12). The call recur(12) returns recur(recur(4)) since 12 is greater than 10. The call recur(4) returns 8, since 4 is less than or equal to 10. Therefore, recur(recur(4)) is recur(8). The call recur(8) returns 16, since 8 is less than or equal to 10.  Therefore, recur(27)returns the value of 16. |
 | 40. ![40](MC_40.png) | I originally answered "D", which is incorrect because when whatsItDo(“W”) is called, nothing is printed since the print occurs in the if statement which does not execute. All previous recursive method calls print a substring of str and not str. | The correct answer is "C". The call whatsItDo(“WATCH”) assigns to temp a substring of “WATCH” starting at 0 and ending at 4 – 1 or 3, which is “WATC”. Next the call whatsItDo(“WATC”) is made. The call whatsItDo(“WATC”), sets its local temp to “WAT” and calls whatsItDo(“WAT”). The call whatsItDo(“WAT”), sets its local temp to “WA” and calls whatsItDo(“WA”). The call whatsItDo(“WA”), sets its local temp to “W” and calls whatsItDo(“W”). The call whatsItDo(“W”) reaches the base case and doesn’t do anything since the length of “W” is 1. Then we need to finish the call to whatsItDo(“WA”), which prints the value of its local temp, “W”.  Then we need to finish the call to whatsItDo(“WAT”), which prints the value of its local temp, “WA”. Then we need to finish the call to whatsItDo(“WATC”), which prints the value of its local temp, “WAT”. Then we need to finish the call to whatsItDo(“WATCH”), which prints the value of its local temp, “WATC”. And the recursive calls are complete. |
+
+## Lessons
+* [Unit 1](https://isabelle926.github.io/student/lesson)
+* [Unit 2](url)
+* [Unit 3](https://isabelle926.github.io/student/2023/10/08/Unit_3_Booleans_IPYNB_2_.html)
+* [Unit 4](https://isabelle926.github.io/student//2023/10/12/Unit4Lesson_IPYNB_2_.html)
+* [Unit 5](https://isabelle926.github.io/student/2023/10/14/Unit5_IPYNB_2_.html)
+* Unit 6 taught by our team
+* [Unit 7](url)
+* [Unit 8](url)
+* [Unit 9](url)
+* [Unit 10](url)
