@@ -1,4 +1,5 @@
 ---
+toc: true
 layout: post
 title: Key Assets and Projects
 description: Blog check in for trimester 2
