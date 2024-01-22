@@ -2,8 +2,9 @@
 toc: true
 layout: none
 title: Individual review
-type: tangibles
-courses: { csa: {week: 12} }
+type: plans
+courses: { csa: {week: 2} }
+categories: [C4.0]
 ---
 
 ## Isabelle's Individual Review

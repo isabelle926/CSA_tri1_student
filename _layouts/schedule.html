@@ -1,29 +1,23 @@
 ---
 layout: default
 ---
-
-{%comment%} 
+{%comment%}
 Setup course data
     - Extract data by course
     - Within course create units
 {%endcomment%}
-
 {% assign course = site.data[page.course] %} <!-- Load YML data -->
 {% assign units = page.units | split: ',' %}
 <h1>{{page.title}}</h1>
 <br>
-
-{%comment%} 
+{%comment%}
 Load all posts with site
 {%endcomment%}
-
 {% assign posts = null | compact %}
 {% assign posts = posts | concat:site.posts | concat:site.pages %}
-
-{%comment%} 
+{%comment%}
 <!-- Iterate through Course Units -->
 {%endcomment%}
-
 {% for unit in units %}
 {% assign unitKey = "Unit" | append: unit %}
 {% assign unitData = course[unitKey] %}
@@ -31,14 +25,20 @@ Load all posts with site
   {{ unitKey }}: {{ unitData.title }}
 </h2>
 <p>  {{ unitData.description }} </p>
-
+{% if unitData.illustration %}
+<details>
+  <summary>Illustration</summary>
+  <pre>
+    <p>{{ unitData.illustration }}</p>
+  </pre>
+</details>
+<br/>
+{% endif %}
 {% assign start = unitData.start %}
 {% assign end = unitData.end %}
-
-{%comment%} 
+{%comment%}
 <!-- Output Column Headings for Blogs -->
 {%endcomment%}
-
 <table>
   <tr>
     <th>Week</th>
@@ -46,76 +46,65 @@ Load all posts with site
     <th>Hacks(Todo)</th>
     <th>Tangibles</th>
   </tr>
-
-  {%comment%} 
-  <!-- These loops group blogs according to Row (week) and Column (category) 
+  {%comment%}
+  <!-- These loops group blogs according to Row (week) and Column (category)
     units = empty array
     sym = value to be used as a separator
     deli = sym forced to array
   -->
   {%endcomment%}
-
-  {% assign units = null | compact %}  
-  {% assign sym = "|||" %} 
-  {% assign deli = sym | compact %} 
-
+  {% assign units = null | compact %}
+  {% assign sym = "|||" %}
+  {% assign deli = sym | compact %}
   {% for index in (start..end) -%}
     {% assign plans = null | compact %}
     {% assign hacks = null | compact %}
     {% assign tangibles = null | compact %}
-
-
-  {%comment%} 
+  {%comment%}
   <!-- looping through all posts -->
   {%endcomment%}
-
     {% for post in posts %}
       {% if post.courses[page.course] %}
-  {%comment%} 
+  {%comment%}
   <!-- prepare data blog post data for evaluation -->
   {%endcomment%}
         {% assign week = post.courses[page.course].week | tangibles: 0 %}
         {% assign title = post.title | compact %}
         {% assign url = post.url | compact %}
-  
-  {%comment%} 
+  {%comment%}
   <!-- process posts for current week -->
   {%endcomment%}
-        {% if week == index %} 
-
-  {%comment%} 
+        {% if week == index %}
+  {%comment%}
   <!-- organizing blogs by type -->
   {%endcomment%}
-          {% if post.type == "plans" %} 
+          {% if post.type == "plans" %}
               {% assign plans = plans | unshift: title %}
               {% assign plans = plans | unshift: url %}
           {% elsif post.type == "hacks" %}
               {% assign hacks = hacks | unshift: title %}
-              {% assign hacks = hacks | unshift: url %} 
+              {% assign hacks = hacks | unshift: url %}
           {% elsif post.type == "tangibles" %}
               {% assign tangibles = tangibles | unshift: title %}
-              {% assign tangibles = tangibles | unshift: url %} 
+              {% assign tangibles = tangibles | unshift: url %}
           {% else %}
               {% assign uk = uk | unshift: title %}
-              {% assign uk = uk | unshift: url %}     
+              {% assign uk = uk | unshift: url %}
           {% endif %}
-
         {% endif %}
       {% endif %}
     {% endfor %}
-
-  {%comment%} 
+  {%comment%}
   <!-- ordering units and inserting column delimiters -->
   {%endcomment%}
   {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:tangibles  %}
-
-  {%comment%} 
+  {%comment%}
   <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
   {%endcomment%}
   <tr>
-  <td> {{ index }} </td> 
+  <td> {{ index }} </td>
   <td>
-  {% for i in (0..units.size) -%} 
+  {% for i in (0..100) -%}
     {% if units.size == 0 %}
       {% break %}
     {% elsif units[0] == sym %} <!-- make new column -->
@@ -123,13 +112,12 @@ Load all posts with site
   <td>
       {% assign units = units | shift %} <!-- remove delimiter -->
     {% else %} <!-- make a link in the column -->
-      - <a href="{{site.baseurl}}/{{units[0]}}">{{units[1]}}</a> <br/> 
+      - <a href="{{site.baseurl}}/{{units[0]}}">{{units[1]}}</a> <br/>
       {% assign units = units | shift | shift %} <!-- remove title and url -->
     {% endif %}
   {% endfor %}
   </td>
   </tr>
   {% endfor %}
-
 </table>
 {% endfor %}
