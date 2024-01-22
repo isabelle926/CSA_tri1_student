@@ -77,3 +77,11 @@ Invoking bot.writeAIMLFiles();
 * [Unit 8](url) grade: 0.9
 * [Unit 9](url)
 * [Unit 10](url)
+
+## Reflection
+Overall, I would say N@TM was pretty successful since a lot of people (especially parents) were interested in what we had to show them. Despite not being able to get my feature to work, I'm pretty proud that I was able to learn how to use AI for a language that I've never used before. 
+
+## Improvements
+* Implement chabot into next project
+* Communicate more
+* Time management
