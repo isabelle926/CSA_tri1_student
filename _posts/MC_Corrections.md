@@ -7,7 +7,7 @@ description: Corrections for collegeboard mcq
 type: tangibles
 ---
 
-![SCORE](MC_score.png)
+![SCORE](image) - 29/39
 
 ## Corrections
 
