@@ -3,9 +3,10 @@ toc: true
 layout: post
 title: Key Assets and Projects
 description: Blog check in for trimester 2
-type: collab
+type: post
 categories: [AP Test Prep, Java, Tri 2]
 tags: [Markdown, Blog]
+courses: { csa: {week: 16} }
 ---
 
 ## Github Analytics
